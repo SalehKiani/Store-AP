@@ -31,49 +31,6 @@ namespace WPF_Project
         {
 
         }
-        private void SignUpclick(object sender, RoutedEventArgs e)
-        {
-            if (password.Password == "1234")
-            {
-                using (var db = new DataBase_connection())
-                {
-                    db.admins.Add(new Admin() { Email = email.Text, Password = password.Password });
-                    db.SaveChanges();
-                }
-            }
-            else
-            {
-                using (var db = new DataBase_connection())
-                {
-                    db.users.Add(new UserProps() { Email = email.Text, Password = password.Password });
-                    db.SaveChanges();
-                }
-            }
-                
-            
-            password.Password = "";
-            email.Text = "";
-        }
 
-        private void Loginclick(object sender, RoutedEventArgs e)
-        {
-            Repository repo = new Repository();
-            try
-            {
-                bool result = repo.loginCheck(email.Text, password.Password);
-                if (result)
-                {
-                    MessageBox.Show("Login Successfully", "LOGIN", MessageBoxButton.OK, MessageBoxImage.Information);
-                }
-            }
-            catch (LoginFail)
-            {
-                MessageBox.Show("User or Pass incorrect.", "LOGIN", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            catch (DBFail)
-            {
-                MessageBox.Show("Uexpected happen.", "LOGIN", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-        }
     }
 }
