@@ -32,5 +32,14 @@ namespace WPF_Project
 
         }
 
+        private void Power_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Account_Click()
+        {
+
+        }
     }
 }

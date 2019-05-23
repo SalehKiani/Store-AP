@@ -47,12 +47,12 @@ namespace WPF_Project.FrontEnd.Views
 
                 if(!result)
                 {
-                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login)","SignUp",MessageBoxButton.OK,MessageBoxImage.Information);
+                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Information);
                 }
             }
             catch(DBFail)
             {
-                MessageBox.Show("The Exception Was Happened,Please Try Again Later", "Login", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Unexpected Happened,Please Try Again Later", "SIGNUP", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
