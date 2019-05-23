@@ -145,13 +145,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrontEnd\Views\LoginPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\Views\SingUpPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Information.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -169,12 +169,11 @@
     <Compile Include="Backend\Repository.cs" />
     <Compile Include="Backend\Usermethods.cs" />
     <Compile Include="Backend\UserProps.cs" />
-    <Compile Include="FrontEnd\Views\LoginPage.xaml.cs" />
+    <Compile Include="FrontEnd\Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
       <DependentUpon>SingUpPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Information.xaml.cs">
-      <DependentUpon>Information.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -187,8 +186,6 @@
       <DependentUpon>20190504153005_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DataBase_connectionModelSnapshot.cs" />
-    <Compile Include="NewFolder1\LoginPage.xaml.cs" />
-    <Compile Include="NewFolder1\SingUpPage.xaml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -217,10 +214,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="NewFolder1\Image\Back2.jpg" />
+    <Resource Include="FrontEnd\Image\Back2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="NewFolder1\Image\Back3.jpg" />
+    <Resource Include="FrontEnd\Image\Back3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

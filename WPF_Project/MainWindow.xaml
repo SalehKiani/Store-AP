@@ -21,15 +21,17 @@
                 <materialDesign:PackIcon Kind="Power" Foreground="White" Width="25" Height="25"/>
             </Button>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Button x:Name="Account" Click="Account_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Button x:Name="Account" Click="FakeAccount_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}">
                     <materialDesign:PackIcon Kind="Account" Foreground="White" Width="25" Height="25"/>
                 </Button>
-                <Button Content="Create Fake Account" Click="Account_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" />
+                <Button Content="Create Fake Account" Click="FakeAccount_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
             </StackPanel>
             
         </Grid>
         <Grid Grid.Row="1">
-            
+            <StackPanel x:Name="GridPage" Margin="260,60,310,70">
+                <LoginUI:LoginPage/>
+            </StackPanel>
         </Grid>
 
     </Grid>

@@ -33,8 +33,8 @@ namespace WPF_Project.FrontEnd.Views
             LoginPage login = new LoginPage();
             MainWindow mainwindow = new MainWindow();
 
-            mainwindow.PageStack.Children.Remove(signup);
-            mainwindow.PageStack.Children.Add(login);
+            mainwindow.GridPage.Children.Remove(signup);
+            mainwindow.GridPage.Children.Add(login);
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
@@ -47,13 +47,18 @@ namespace WPF_Project.FrontEnd.Views
 
                 if(!result)
                 {
-                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Information);
+                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Error);
                 }
             }
             catch(DBFail)
             {
                 MessageBox.Show("Unexpected Happened,Please Try Again Later", "SIGNUP", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void SignUp_admin_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
