@@ -27,8 +27,8 @@
             </PasswordBox>
             <Button x:Name="Login" Click="Login_Click" Content="Login" Margin="40,20"  Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18" />
             <Button x:Name="HaveNotAccount" Click="HaveNotAccount_Click" Content="Don't have an account?" Margin="80,0" Background="Black" Foreground="White"/>
-            <TextBlock Margin="40,0,40,0" Foreground="White" FontSize="10" Text="_____________________________________________" FontFamily="Simplified Arabic Fixed"/>
-            <Button x:Name="Login_admin" Click="Login_admin_click" Content="Login Via Admin" Margin="40,25" Background="#FFCB5C00" Foreground="Black" FontSize="16"/>
+            <Separator Margin="40,18"/>
+            <Button x:Name="Login_admin" Click="Login_admin_click" Content="Login Via Admin" Margin="40,0" Background="#FFCB5C00" Foreground="Black" FontSize="16"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -18,7 +18,7 @@ using WPF_Project.Backend.Exceptions;
 namespace WPF_Project.FrontEnd.Views
 {
     /// <summary>
-    /// Interaction logic for SingUpPage.xaml
+    /// Interaction logic for SignUpPage.xaml
     /// </summary>
     public partial class SingUpPage : UserControl
     {
@@ -48,6 +48,13 @@ namespace WPF_Project.FrontEnd.Views
                 if(!result)
                 {
                     MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Error);
+                }
+                else
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    SingUpPage singUp = new SingUpPage();
+
+
                 }
             }
             catch(DBFail)

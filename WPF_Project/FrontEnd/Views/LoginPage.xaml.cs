@@ -52,7 +52,27 @@ namespace WPF_Project.FrontEnd.Views
 
         private void Login_admin_click(object sender, RoutedEventArgs e)
         {
+            var db = new DataBase_connection();
+            if(password.Password=="1234567890")
+            {
+                try
+                {
+                    var res = db.admins.Where(i => i.Email == email.Text);
+                    if(res != null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("You Are Not Signed Up As Administrator","LOGIN ADMIN",MessageBoxButton.OK,MessageBoxImage.Information);
+                    }
+                }
+                catch(DBFail)
+                {
+                    MessageBox.Show("UnExpected Happen", "LOGIN ADMIN", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
 
+            }
         }
 
         private void HaveNotAccount_Click(object sender, RoutedEventArgs e)

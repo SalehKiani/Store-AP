@@ -145,11 +145,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrontEnd\Views\Completion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="FrontEnd\Views\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FrontEnd\Views\SingUpPage.xaml">
+    <Page Include="FrontEnd\Views\SignUpPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -169,11 +173,14 @@
     <Compile Include="Backend\Repository.cs" />
     <Compile Include="Backend\Usermethods.cs" />
     <Compile Include="Backend\UserProps.cs" />
+    <Compile Include="FrontEnd\Views\Completion.xaml.cs">
+      <DependentUpon>Completion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="FrontEnd\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
-      <DependentUpon>SingUpPage.xaml</DependentUpon>
+    <Compile Include="FrontEnd\Views\SignUpPage.xaml.cs">
+      <DependentUpon>SignUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

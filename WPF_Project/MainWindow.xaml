@@ -29,7 +29,7 @@
             
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel x:Name="GridPage" Margin="260,60,310,70">
+            <StackPanel x:Name="GridPage" Margin="270,60,330,70">
                 <LoginUI:LoginPage/>
             </StackPanel>
         </Grid>
