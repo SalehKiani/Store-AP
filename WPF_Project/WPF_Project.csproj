@@ -153,7 +153,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="FrontEnd\Views\SignUpPage.xaml">
+    <Page Include="FrontEnd\Views\SingUpPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -179,8 +179,8 @@
     <Compile Include="FrontEnd\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="FrontEnd\Views\SignUpPage.xaml.cs">
-      <DependentUpon>SignUpPage.xaml</DependentUpon>
+    <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
+      <DependentUpon>SingUpPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
