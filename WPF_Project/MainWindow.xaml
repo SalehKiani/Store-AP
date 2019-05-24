@@ -16,10 +16,11 @@
         
         <Grid Grid.RowSpan="2">
             <Image Source="F:\Programmes\C#\Project\Photo(Store)\Back2.jpg"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Kopon" FontSize="60" FontFamily="Edwardian Script ITC" FontWeight="Bold" TextDecorations="{x:Null}"/>
         </Grid>
         
         <Grid Background="#FF000227">
-            <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Right" Foreground="White" Width="30" Height="30"/>
+            <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Right" Margin="2" Foreground="Red" Width="25" Height="25"/>
             <Button x:Name="Power" HorizontalAlignment="Right" Click="Power_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
                 <materialDesign:PackIcon Kind="Account" Foreground="White" Width="30" Height="30"/>
