@@ -10,7 +10,7 @@
     <Grid>
         <Rectangle RadiusX="30" RadiusY="30">
             <Rectangle.Fill>
-                <SolidColorBrush Color="Black" Opacity="0.7"/>
+                <SolidColorBrush Color="Black" Opacity="0.8"/>
             </Rectangle.Fill>
         </Rectangle>
         <StackPanel>

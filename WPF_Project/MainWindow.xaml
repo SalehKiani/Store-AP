@@ -13,24 +13,23 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        
         <Grid Grid.RowSpan="2">
             <Image Source="F:\Programmes\C#\Project\Photo(Store)\Back2.jpg"/>
         </Grid>
+        
         <Grid Background="#FF000227">
-            <Button x:Name="Power" HorizontalAlignment="Right" Click="Power_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}">
-                <materialDesign:PackIcon Kind="Power" Foreground="White" Width="25" Height="25"/>
-            </Button>
+            <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Right" Foreground="White" Width="30" Height="30"/>
+            <Button x:Name="Power" HorizontalAlignment="Right" Click="Power_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
-                <Button x:Name="Account" Click="FakeAccount_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}">
-                    <materialDesign:PackIcon Kind="Account" Foreground="White" Width="25" Height="25"/>
-                </Button>
+                <materialDesign:PackIcon Kind="Account" Foreground="White" Width="30" Height="30"/>
                 <Button Content="Create Fake Account" Click="FakeAccount_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
             </StackPanel>
-            
         </Grid>
+        
         <Grid Grid.Row="1">
             <StackPanel x:Name="GridPage" Margin="270,60,330,70">
-                <LoginUI:LoginPage/>
+                <LoginUI:LoginPage Height="420"/>
             </StackPanel>
         </Grid>
 

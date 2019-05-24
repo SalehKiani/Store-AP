@@ -27,9 +27,26 @@ namespace WPF_Project.FrontEnd.Views
 
         private void Name_TextChange(object sender, TextChangedEventArgs e)
         {
+            string str = nameTXT.Text;
+            int last=str.Length;
+            try
+            {
+                Convert.ToInt32(str[last - 1]);
+            }
+            catch(FormatException)
+            {
+                char[] s = new char[last -1];
+                for(int i=0; i<last-1 ;i++)
+                {
+                    s[i] = str[i];
+                }
+                nameTXT.Text = s.ToString();
+            }
+            catch
+            {
 
+            }
         }
-
         private void Name_Keydown(object sender, KeyEventArgs e)
         {
             if(e.Key == Key.Enter)
@@ -41,7 +58,6 @@ namespace WPF_Project.FrontEnd.Views
                 e.Handled = true;
             }
         }
-
         private void Phonenumber_Preview(object sender, TextCompositionEventArgs e)
         {
             int a;
@@ -50,12 +66,11 @@ namespace WPF_Project.FrontEnd.Views
                 e.Handled = true;
             }
         }
-
         private void Phonenumber_Keydown(object sender, KeyEventArgs e)
         {
             if (e.Key == Key.Enter)
                 Address.Focus();
         }
-    }
+    
     }
 }

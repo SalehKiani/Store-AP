@@ -53,8 +53,10 @@ namespace WPF_Project.FrontEnd.Views
                 {
                     MainWindow mainWindow = new MainWindow();
                     SingUpPage singUp = new SingUpPage();
+                    Completion completion = new Completion();
 
-
+                    mainWindow.GridPage.Children.Remove(singUp);
+                    mainWindow.GridPage.Children.Add(completion);
                 }
             }
             catch(DBFail)
