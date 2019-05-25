@@ -145,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="FrontEnd\Views\SingUpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Information.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -160,11 +164,16 @@
     <Compile Include="Backend\Admin.cs" />
     <Compile Include="Backend\DataBase connection.cs" />
     <Compile Include="Backend\Exceptions\DBFail.cs" />
+    <Compile Include="Backend\Exceptions\EmptyField.cs" />
     <Compile Include="Backend\Exceptions\LoginFail.cs" />
     <Compile Include="Backend\Product.cs" />
     <Compile Include="Backend\Repository.cs" />
     <Compile Include="Backend\Usermethods.cs" />
     <Compile Include="Backend\UserProps.cs" />
+    <Compile Include="FrontEnd\Views\LoginPage.xaml.cs" />
+    <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
+      <DependentUpon>SingUpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Information.xaml.cs">
       <DependentUpon>Information.xaml</DependentUpon>
     </Compile>

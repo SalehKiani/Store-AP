@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPF_Project.Backend.Exceptions;
+using WPF_Project.Backend;
 
 namespace WPF_Project.Backend
 {
     public class Repository
     {
-        private string email,pass;
-
+        List<UserProps> Userlist = new List<UserProps>();
+        List<Admin> Adminlist = new List<Admin>();
+        UserProps ActiveUser = new UserProps();
 
         public bool loginCheck(string email,string password)
         {
@@ -21,6 +23,7 @@ namespace WPF_Project.Backend
 
                 if (res != null)
                 {
+                    ActiveUser.Email = email;    ActiveUser.Password = password;
                     return true;
                 }
                 else
@@ -37,6 +40,8 @@ namespace WPF_Project.Backend
 
         public bool signupCheck(string email,string password)
         {
+            if (email == "\0" || password == "\0")
+                throw new EmptyField();
             try
             {
                 var db = new DataBase_connection();
@@ -46,24 +51,31 @@ namespace WPF_Project.Backend
                 {
                     return false;
                 }
-                else
-                {
-                    this.email = email;
-                    this.pass = password;
-                    return true;
-                }
+                db.users.Add(new UserProps() { Email = email, Password = password });
+                Userlist.Add(new UserProps { Email = email, Password = password });
+                ActiveUser.Email = email;      ActiveUser.Password = password;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new DBFail();
             }
+            return true;
         }
-         public void complete_signup(string name,string adress,int phonenum)
+         public void complete_signup(string name,string adress,string phonenum)
         {
             try
             {
                 var db = new DataBase_connection();
-                db.users.Add(new UserProps() {Name = name,PhoneNo = phonenum.ToString(),Adress = adress, Email = this.email, Password = this.pass });
+                var result1 = db.users.Where(i => i.Email==ActiveUser.Email).SingleOrDefault();
+                if (result1 == null)
+                {
+                    var result2 = db.admins.Where(i => i.Email == ActiveUser.Email).SingleOrDefault();
+                    result2.Name = name;
+                    db.SaveChanges();
+                }
+                result1.Name = name;
+                result1.Adress = adress;
+                result1.PhoneNo = phonenum;
                 db.SaveChanges();
             }
             catch(Exception)
