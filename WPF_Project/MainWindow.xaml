@@ -4,93 +4,35 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_Project"
+        xmlns:LoginUI="clr-namespace:WPF_Project.FrontEnd.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Login" Height="500" Width="800" ResizeMode="NoResize">
+        Title="Login" Height="600" Width="1000" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
     <Grid>
-        <Grid.Effect>
-            <DropShadowEffect Color="#FF109FD4" BlurRadius="10" ShadowDepth="3" Opacity="0.6"/>
-        </Grid.Effect>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                <GradientStop Color="#FFFBFFFF"/>
-                <GradientStop Color="DarkCyan" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
-
-        <Rectangle Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="7" Fill="White" RadiusX="300" RadiusY="100" >
-            <Rectangle.Effect>
-                <DropShadowEffect Color="#FF25554E" BlurRadius="2" Opacity="0.6" ShadowDepth="4"/>
-            </Rectangle.Effect>
-        </Rectangle>
-
-        <TextBox x:Name="email" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="25" Background="#FFD8D8D8">
-            <TextBox.Effect>
-                <DropShadowEffect BlurRadius="1" Opacity="0.5" ShadowDepth="4"/>
-            </TextBox.Effect>
-        </TextBox>
-        <PasswordBox x:Name="password" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" VerticalAlignment="Center" FontSize="25" Background="#FFD8D8D8">
-            <PasswordBox.Effect>
-                <DropShadowEffect BlurRadius="1" Opacity="0.5" ShadowDepth="4"/>
-            </PasswordBox.Effect>
-        </PasswordBox>
         
-        <TextBlock Grid.Row="2" Grid.Column="1" Text="E-Mail:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">
-            <TextBlock.Effect>
-                <DropShadowEffect BlurRadius="3" Opacity="0.7" ShadowDepth="2"/>
-            </TextBlock.Effect>
-        </TextBlock>
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="Password:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="18">
-            <TextBlock.Effect>
-                <DropShadowEffect BlurRadius="3" Opacity="0.7" ShadowDepth="2"/>
-            </TextBlock.Effect>
-        </TextBlock>
-            
-        <TextBlock  Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" Text="Register" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="50" FontStyle="Italic" Foreground="#FF109FD4">
-            <TextBlock.Effect>
-                <DropShadowEffect Color="#FF109FD4" Opacity="0.6" ShadowDepth="4"/>
-            </TextBlock.Effect>
-        </TextBlock>
-
-        <Button x:Name="signup" Grid.Row="5" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="SignUp" FontSize="20" Foreground="#FFFBFBFB" BorderBrush="#FF707070" Click="SignUpclick">
-            <Button.Effect>
-                <DropShadowEffect Opacity="0.7" ShadowDepth="3"/>
-            </Button.Effect>
-            <Button.Background>
-                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                     <GradientStop Color="#FF11F965" Offset="0"/>
-                     <GradientStop Color="#FF02491C" Offset="1"/>
-                 </LinearGradientBrush>
-             </Button.Background>
-        </Button>
-        <Button x:Name="Login" Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" Content="LogIn" FontSize="20" Foreground="White" HorizontalAlignment="Center" ClickMode="Press" Click="Loginclick">
-            <Button.Effect>
-                <DropShadowEffect Opacity="0.7" ShadowDepth="3"/>
-            </Button.Effect>
-             <Button.Background>
-                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                     <GradientStop Color="#FF1FCDF3"/>
-                     <GradientStop Color="#FF101AF1" Offset="1"/>
-                 </LinearGradientBrush>
-             </Button.Background>
-        </Button>
+        <Grid Grid.RowSpan="2">
+            <Image Source="F:\Programmes\C#\Project\Photo(Store)\Back2.jpg"/>
+            <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Kopon" FontSize="60" FontFamily="Edwardian Script ITC" FontWeight="Bold" TextDecorations="{x:Null}"/>
+        </Grid>
+        
+        <Grid Background="#FF000227">
+            <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Right" Margin="2" Foreground="Red" Width="25" Height="25"/>
+            <Button x:Name="Power" HorizontalAlignment="Right" Click="Power_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
+                <materialDesign:PackIcon Kind="Account" Foreground="White" Width="30" Height="30"/>
+                <Button Content="Create Fake Account" Click="FakeAccount_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            </StackPanel>
+        </Grid>
+        
+        <Grid Grid.Row="1">
+            <StackPanel x:Name="GridPage" Margin="270,60,330,70">
+                <LoginUI:LoginPage Height="420"/>
+            </StackPanel>
+        </Grid>
 
     </Grid>
 </Window>

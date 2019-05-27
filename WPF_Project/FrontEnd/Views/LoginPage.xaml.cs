@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Project.Backend;
 using WPF_Project.Backend.Exceptions;
-using WPF_Project.FrontEnd.Views;
 
 namespace WPF_Project.FrontEnd.Views
 {
@@ -28,32 +27,62 @@ namespace WPF_Project.FrontEnd.Views
             InitializeComponent();
         }
 
-        private void Loginclick(object sender, RoutedEventArgs e)
+        private void Login_Click(object sender, RoutedEventArgs e)
         {
+            bool result;
             Repository repo = new Repository();
             try
             {
-                repo.loginCheck(email.Text, password.Password);
+                result = repo.loginCheck(email.Text, password.Password);
+                if(result)
+                {
+                    MessageBox.Show("Login Succesfully","LOGIN",MessageBoxButton.OK,MessageBoxImage.Information);
+                }
             }
             catch(LoginFail)
             {
-                MessageBox.Show("Emain Or Password Is Not Correct","Login",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("Email Or Password Incorrect","LOGIN",MessageBoxButton.OK,MessageBoxImage.Error);
             }
             catch(DBFail)
             {
-                MessageBox.Show("The Exception Was Happened,Please Try Again Later","Login",MessageBoxButton.OK,MessageBoxImage.Error);
+                MessageBox.Show("UnExpected Happen","LOGIN",MessageBoxButton.OK,MessageBoxImage.Error);
             }
             
         }
 
+        private void Login_admin_click(object sender, RoutedEventArgs e)
+        {
+            var db = new DataBase_connection();
+            if(password.Password=="1234567890")
+            {
+                try
+                {
+                    var res = db.admins.Where(i => i.Email == email.Text);
+                    if(res != null)
+                    {
+                        
+                    }
+                    else
+                    {
+                        MessageBox.Show("You Are Not Signed Up As Administrator","LOGIN ADMIN",MessageBoxButton.OK,MessageBoxImage.Information);
+                    }
+                }
+                catch(DBFail)
+                {
+                    MessageBox.Show("UnExpected Happen", "LOGIN ADMIN", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+
+            }
+        }
+
         private void HaveNotAccount_Click(object sender, RoutedEventArgs e)
         {
-            LoginPage login = new LoginPage();
             SingUpPage signup = new SingUpPage();
+            LoginPage login = new LoginPage();
             MainWindow mainwindow = new MainWindow();
 
-            mainwindow.PageStack.Children.Remove(login);
-            mainwindow.PageStack.Children.Add(signup);
+            mainwindow.GridPage.Children.Remove(login);
+            mainwindow.GridPage.Children.Add(signup);
         }
     }
 }

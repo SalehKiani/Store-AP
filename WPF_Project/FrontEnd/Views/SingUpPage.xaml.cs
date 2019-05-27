@@ -18,7 +18,7 @@ using WPF_Project.Backend.Exceptions;
 namespace WPF_Project.FrontEnd.Views
 {
     /// <summary>
-    /// Interaction logic for SingUpPage.xaml
+    /// Interaction logic for SignUpPage.xaml
     /// </summary>
     public partial class SingUpPage : UserControl
     {
@@ -33,8 +33,8 @@ namespace WPF_Project.FrontEnd.Views
             LoginPage login = new LoginPage();
             MainWindow mainwindow = new MainWindow();
 
-            mainwindow.PageStack.Children.Remove(signup);
-            mainwindow.PageStack.Children.Add(login);
+            mainwindow.GridPage.Children.Remove(signup);
+            mainwindow.GridPage.Children.Add(login);
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)
@@ -47,13 +47,27 @@ namespace WPF_Project.FrontEnd.Views
 
                 if(!result)
                 {
-                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login)","SignUp",MessageBoxButton.OK,MessageBoxImage.Information);
+                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Error);
+                }
+                else
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    SingUpPage singUp = new SingUpPage();
+                    Completion completion = new Completion();
+
+                    mainWindow.GridPage.Children.Remove(singUp);
+                    mainWindow.GridPage.Children.Add(completion);
                 }
             }
             catch(DBFail)
             {
-                MessageBox.Show("The Exception Was Happened,Please Try Again Later", "Login", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Unexpected Happened,Please Try Again Later", "SIGNUP", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void SignUp_admin_click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

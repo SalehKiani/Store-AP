@@ -1,10 +1,10 @@
-﻿<UserControl x:Class="WPF_Project.FrontEnd.Views.SingUpPage"
+﻿<UserControl x:Class="WPF_Project.FrontEnd.Views.LoginPage"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WPF_Project.FrontEnd.Views"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              mc:Ignorable="d" 
              d:DesignHeight="400" d:DesignWidth="350">
     <Grid>
@@ -14,7 +14,7 @@
             </Rectangle.Fill>
         </Rectangle>
         <StackPanel>
-            <TextBlock Text="SignUp" FontSize="50" HorizontalAlignment="Center" Foreground="#FF20C9DA" FontFamily="Script MT Bold" Margin="0,20,0,10"/>
+            <TextBlock Text="Login" FontSize="50" HorizontalAlignment="Center" Foreground="#FF20C9DA" FontFamily="Script MT Bold" Margin="0,20,0,10"/>
             <TextBox x:Name="email" materialDesign:HintAssist.Hint="E-Mail" FontSize="25" Margin="40,10" Foreground="White">
                 <TextBox.Background>
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
@@ -25,10 +25,10 @@
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
                 </PasswordBox.Background>
             </PasswordBox>
-            <Button x:Name="Signup" Click="SignUp_Click" Content="SignUp" Margin="40,20" Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18"/>
-            <Button x:Name="HaveAccount" Click="HaveAccount_Click" Content="Do You have an account?" Margin="80,0" Background="Black" Foreground="White"/>
+            <Button x:Name="Login" Click="Login_Click" Content="Login" Margin="40,20"  Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18" />
+            <Button x:Name="HaveNotAccount" Click="HaveNotAccount_Click" Content="Don't have an account?" Margin="80,0" Background="Black" Foreground="White"/>
             <Separator Margin="40,18"/>
-            <Button x:Name="Signup_admin" Click="SignUp_admin_click" Content="SignUp Via Admin" Margin="40,0" Background="#FFCB5C00" BorderBrush="DeepSkyBlue" Foreground="Black" FontSize="16"/>
+            <Button x:Name="Login_admin" Click="Login_admin_click" Content="Login Via Admin" Margin="40,0" Background="#FFCB5C00" BorderBrush="DeepSkyBlue" Foreground="Black" FontSize="16"/>
         </StackPanel>
     </Grid>
 </UserControl>
