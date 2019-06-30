@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Project.Backend;
 using WPF_Project.Backend.Exceptions;
+using WPF_Project.FrontEnd.Views;
 
 namespace WPF_Project
 {
@@ -25,6 +26,8 @@ namespace WPF_Project
         public MainWindow()
         {
             InitializeComponent();
+            LoginPage login = new LoginPage();
+            this.GridPage.Children.Add(login);
         }
 
         private void Line_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)

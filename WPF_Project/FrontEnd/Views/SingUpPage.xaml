@@ -10,25 +10,34 @@
     <Grid>
         <Rectangle RadiusX="30" RadiusY="30">
             <Rectangle.Fill>
-                <SolidColorBrush Color="Black" Opacity="0.8"/>
+                <SolidColorBrush Color="Black"/>
             </Rectangle.Fill>
         </Rectangle>
         <StackPanel>
-            <TextBlock Text="SignUp" FontSize="50" HorizontalAlignment="Center" Foreground="#FF20C9DA" FontFamily="Script MT Bold" Margin="0,20,0,10"/>
+            <TextBlock Text="SignUp" FontSize="50" HorizontalAlignment="Center" Foreground="#FF20C9DA" FontFamily="Script MT Bold" Margin="0,20,0,40"/>
             <TextBox x:Name="email" materialDesign:HintAssist.Hint="E-Mail" FontSize="25" Margin="40,10" Foreground="White">
                 <TextBox.Background>
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
                 </TextBox.Background>
             </TextBox>
-            <PasswordBox x:Name="password" materialDesign:HintAssist.Hint="Password" FontSize="25" Margin="40,10,40,20" Foreground="White">
+            <PasswordBox x:Name="password" materialDesign:HintAssist.Hint="Password" FontSize="25" Margin="40,10,40,30" Foreground="White">
                 <PasswordBox.Background>
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
                 </PasswordBox.Background>
             </PasswordBox>
-            <Button x:Name="Signup" Click="SignUp_Click" Content="SignUp" Margin="40,20" Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18"/>
-            <Button x:Name="HaveAccount" Click="HaveAccount_Click" Content="Do You have an account?" Margin="80,0" Background="Black" Foreground="White"/>
-            <Separator Margin="40,18"/>
-            <Button x:Name="Signup_admin" Click="SignUp_admin_click" Content="SignUp Via Admin" Margin="40,0" Background="#FFCB5C00" BorderBrush="DeepSkyBlue" Foreground="Black" FontSize="16"/>
+            <Button x:Name="Signup" Click="SignUp_Click" Content="SignUp" Margin="40,20" Background="#FF00068D" Foreground="#FF20C9DA" FontSize="20"/>
+            <Button x:Name="HaveAccount" Click="HaveAccount_Click" Content="Do You have an account?" Margin="108,0,98,0" Background="Black" Foreground="White" RenderTransformOrigin="0.5,0.5">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-0.092"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+            <TextBlock Margin="40,0,40,0" Foreground="White" FontSize="10" Text="_____________________________________________" FontFamily="Simplified Arabic Fixed"/>
+            <Button x:Name="Signup_admin" Click="SignUp_admin_click" Content="SignUp Via Admin" Margin="40,25" Background="#FFCB5C00" Foreground="Black" FontSize="16"/>
         </StackPanel>
     </Grid>
 </UserControl>

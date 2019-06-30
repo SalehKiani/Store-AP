@@ -149,17 +149,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Information.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="FrontEnd\Views\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="FrontEnd\Views\SingUpPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -178,9 +170,6 @@
     <Compile Include="Backend\Repository.cs" />
     <Compile Include="Backend\Usermethods.cs" />
     <Compile Include="Backend\UserProps.cs" />
-    <Compile Include="Information.xaml.cs">
-      <DependentUpon>Information.xaml</DependentUpon>
-    </Compile>
     <Compile Include="FrontEnd\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -226,10 +215,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="FrontEnd\Image\Back2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="FrontEnd\Image\Back3.jpg" />
+    <Resource Include="FrontEnd\Image\Back2.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="FrontEnd\Image\Back3.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

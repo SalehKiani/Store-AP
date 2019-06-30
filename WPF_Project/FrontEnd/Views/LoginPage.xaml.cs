@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WPF_Project.Backend;
 using WPF_Project.Backend.Exceptions;
+using WPF_Project.FrontEnd.Views;
 
 namespace WPF_Project.FrontEnd.Views
 {
@@ -77,12 +78,10 @@ namespace WPF_Project.FrontEnd.Views
 
         private void HaveNotAccount_Click(object sender, RoutedEventArgs e)
         {
-            SingUpPage signup = new SingUpPage();
-            LoginPage login = new LoginPage();
-            MainWindow mainwindow = new MainWindow();
-
-            mainwindow.GridPage.Children.Remove(login);
-            mainwindow.GridPage.Children.Add(signup);
+            SingUpPage singUp = new SingUpPage();
+            Window main = Window.GetWindow(this);
+            main.GridPage.Children.Remove(this);
+            main.GridPage.Children.Add(singUp);
         }
     }
 }

@@ -15,7 +15,7 @@
         </Grid.RowDefinitions>
         
         <Grid Grid.RowSpan="2">
-            <Image Source="F:\Programmes\C#\Project\Photo(Store)\Back2.jpg"/>
+            <Image Source="D:\AP_Project\Store-AP\WPF_Project\FrontEnd\Image\Back2.jpg"/>
             <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Kopon" FontSize="60" FontFamily="Edwardian Script ITC" FontWeight="Bold" TextDecorations="{x:Null}"/>
         </Grid>
         
@@ -30,7 +30,6 @@
         
         <Grid Grid.Row="1">
             <StackPanel x:Name="GridPage" Margin="270,60,330,70">
-                <LoginUI:LoginPage Height="420"/>
             </StackPanel>
         </Grid>
 
