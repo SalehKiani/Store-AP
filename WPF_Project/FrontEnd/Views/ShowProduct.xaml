@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="WPF_Project.FrontEnd.Views.ShowProduct"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:WPF_Project.FrontEnd.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="300">
+    <Grid Margin="7" Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="7*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="product_picture" Grid.Row="0" Background="#FF5F5F5F" Margin="10">
+            
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Border BorderThickness="1" Margin="5" BorderBrush="Black" CornerRadius="10">
+                <StackPanel Margin="10">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" TextBlock.TextAlignment="Right">
+                    <TextBox x:Name="name"/>
+                    <TextBlock Text=": نام محصول" FontFamily="Rockwell Extra Bold" />
+                </StackPanel>
+                <Separator Margin="10,0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" TextBlock.TextAlignment="Right">
+                    <TextBox x:Name="price" />
+                    <TextBlock Text=": قیمت" Margin="0,4,0,0" FontFamily="Rockwell Extra Bold" />
+                </StackPanel>
+                <Separator Margin="10,0"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" TextBlock.TextAlignment="Right">
+                    <TextBox x:Name="explain" />
+                    <TextBlock Text=": توضیحات" Margin="0,4,0,0" FontFamily="Rockwell Extra Bold" />
+                </StackPanel>
+            </StackPanel>
+            </Border>
+        </Grid>
+
+    </Grid>
+</UserControl>
