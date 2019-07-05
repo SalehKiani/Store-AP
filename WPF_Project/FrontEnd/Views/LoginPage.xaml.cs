@@ -27,7 +27,6 @@ namespace WPF_Project.FrontEnd.Views
         {
             InitializeComponent();
         }
-
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             bool result;
@@ -80,12 +79,13 @@ namespace WPF_Project.FrontEnd.Views
         {
             try
             {
-                Window win = Window.GetWindow(this);
-                GridPage.Children.add(win);
+                MainWindow mainwin = new MainWindow();
+                mainwin.Remove_Login();
+                mainwin.Add_Signup();
             }
-            catch(Exception ae)
+            catch(Exception ex)
             {
-                MessageBox.Show(ae.Message);
+                MessageBox.Show(ex.Message);
             }
 
         //    GridPage.Children.RemoveAt(0);

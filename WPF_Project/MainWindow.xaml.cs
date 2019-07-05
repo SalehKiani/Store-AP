@@ -26,9 +26,27 @@ namespace WPF_Project
         public MainWindow()
         {
             InitializeComponent();
-            LoginPage login = new LoginPage();
             this.GridPage.Children.Add(login);
         }
+        LoginPage login = new LoginPage();
+        SingUpPage signup = new SingUpPage();
+        public void Add_Login()
+        {
+            GridPage.Children.Add(login);
+        }
+        public void Add_Signup()
+        {
+            GridPage.Children.Add(signup);
+        }
+        public void Remove_Signup()
+        {
+            GridPage.Children.Remove(signup);
+        }
+        public void Remove_Login()
+        {
+            GridPage.Children.Remove(login);
+        }
+
 
         private void Line_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -49,6 +67,13 @@ namespace WPF_Project
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var storepage = new Store_Page();
+            storepage.Show();
+            this.Close();
         }
     }
 }

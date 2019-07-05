@@ -26,10 +26,12 @@
                 <materialDesign:PackIcon Kind="Account" Foreground="White" Width="30" Height="30"/>
                 <Button Content="Create Fake Account" Click="FakeAccount_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
             </StackPanel>
+            <Button HorizontalAlignment="Center" Content="ورود به فروشگاه" Click="HomeButton_Click" Background="#FF0059D8" BorderBrush="{x:Null}">
+            </Button>
         </Grid>
 
         <Grid Grid.Row="1">
-            <StackPanel x:Name="GridPage" Margin="270,60,330,70">
+            <StackPanel x:Name="GridPage" Margin="270,60,330,50">
             </StackPanel>
         </Grid>
 
