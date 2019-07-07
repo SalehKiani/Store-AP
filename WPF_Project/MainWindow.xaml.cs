@@ -29,6 +29,25 @@ namespace WPF_Project
             LoginPage login = new LoginPage();
             this.GridPage.Children.Add(login);
         }
+        LoginPage login = new LoginPage();
+        SingUpPage signup = new SingUpPage();
+        public void Add_Login()
+        {
+            GridPage.Children.Add(login);
+        }
+        public void Add_Signup()
+        {
+            GridPage.Children.Add(signup);
+        }
+        public void Remove_Signup()
+        {
+            GridPage.Children.Remove(signup);
+        }
+        public void Remove_Login()
+        {
+            GridPage.Children.Remove(login);
+        }
+
 
         private void Line_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -42,27 +61,20 @@ namespace WPF_Project
 
         private void FakeAccount_Click(object sender, RoutedEventArgs e)
         {
-            string[] names = new string[] {"Ali","Reza","Hassan","Mohammad","Hossein","Amir","Saleh","Mehdi","Hamid","Sajad"};
-            int pass,k1,k2,k3;
-            Int64 phone;
-            string name;
-            Random random = new Random();
-            var db = new DataBase_connection();
-            for(int i=1; i <= 10; i++)
-            {
-                pass = random.Next(1000,10000);
-                phone = random.Next(900,1000)*10000000 + random.Next(10000000);
-                k1 = random.Next(10);
-                k2 = random.Next(10);
-                k3 = random.Next(10);
-                name = names[k1] + names[k2] + names[k3];
+            FakeAccount fakeaccount = new FakeAccount();
+            fakeaccount.Create();
+        }
 
-                db.users.Add(new UserProps(){Email = (name + pass.ToString() +"@gmail.com"),
-                                             PhoneNo = phone.ToString(),
-                                             Name = name,
-                                             Adress = names[k1] +","+ names[k2]+","+names[k3]+",House Number"+pass.ToString(),
-                                             Password = pass.ToString()});
-            }
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        {
+            var storepage = new Store_Page();
+            storepage.Show();
+            this.Close();
         }
     }
 }

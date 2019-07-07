@@ -145,13 +145,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="FrontEnd\Views\SingUpPage.xaml">
+    <Compile Include="FrontEnd\Views\Profile_Page.xaml.cs">
+      <DependentUpon>Profile_Page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Store_Page.xaml.cs">
+      <DependentUpon>Store_Page.xaml</DependentUpon>
+    </Compile>
+    <Page Include="FrontEnd\Views\Completion.xaml">
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Page Include="FrontEnd\Views\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\Views\Profile_Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="FrontEnd\Views\ShowProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrontEnd\Views\SingUpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -166,12 +185,16 @@
     <Compile Include="Backend\Exceptions\DBFail.cs" />
     <Compile Include="Backend\Exceptions\EmptyField.cs" />
     <Compile Include="Backend\Exceptions\LoginFail.cs" />
+    <Compile Include="Backend\FakeAccount.cs" />
     <Compile Include="Backend\Product.cs" />
     <Compile Include="Backend\Repository.cs" />
     <Compile Include="Backend\Usermethods.cs" />
     <Compile Include="Backend\UserProps.cs" />
     <Compile Include="FrontEnd\Views\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FrontEnd\Views\ShowProduct.xaml.cs">
+      <DependentUpon>ShowProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
       <DependentUpon>SingUpPage.xaml</DependentUpon>
@@ -180,6 +203,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Store_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Migrations\20190504153005_InitialCreate.cs" />

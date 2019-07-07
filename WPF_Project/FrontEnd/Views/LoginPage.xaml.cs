@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Project;
 using WPF_Project.Backend;
 using WPF_Project.Backend.Exceptions;
 using WPF_Project.FrontEnd.Views;
@@ -27,7 +28,6 @@ namespace WPF_Project.FrontEnd.Views
         {
             InitializeComponent();
         }
-
         private void Login_Click(object sender, RoutedEventArgs e)
         {
             bool result;
@@ -61,7 +61,7 @@ namespace WPF_Project.FrontEnd.Views
                     var res = db.admins.Where(i => i.Email == email.Text);
                     if(res != null)
                     {
-                        
+                        //Go To Admin Page
                     }
                     else
                     {
@@ -78,10 +78,17 @@ namespace WPF_Project.FrontEnd.Views
 
         private void HaveNotAccount_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
             SingUpPage singUp = new SingUpPage();
             MainWindow main = Window.GetWindow(this) as MainWindow;
             main.GridPage.Children.Remove(this);
             main.GridPage.Children.Add(singUp);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

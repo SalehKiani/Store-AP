@@ -13,23 +13,25 @@
             <RowDefinition Height="30"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
         <Grid Grid.RowSpan="2">
-            <Image Source="D:\AP_Project\Store-AP\WPF_Project\FrontEnd\Image\Back2.jpg"/>
+            <Image Name="Image1" Source="/FrontEnd/Image/Back2.jpg" />
             <TextBlock VerticalAlignment="Bottom" HorizontalAlignment="Left" Text="Kopon" FontSize="60" FontFamily="Edwardian Script ITC" FontWeight="Bold" TextDecorations="{x:Null}"/>
         </Grid>
-        
-        <Grid Background="#FF000227">
+
+        <Grid Background="#FF000227" MouseDown="Grid_MouseDown">
             <materialDesign:PackIcon Kind="Power" HorizontalAlignment="Right" Margin="2" Foreground="Red" Width="25" Height="25"/>
             <Button x:Name="Power" HorizontalAlignment="Right" Click="Power_Click" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" >
                 <materialDesign:PackIcon Kind="Account" Foreground="White" Width="30" Height="30"/>
                 <Button Content="Create Fake Account" Click="FakeAccount_Click" Height="30" Foreground="White" VerticalAlignment="Center" Background="{x:Null}" BorderBrush="{x:Null}"/>
             </StackPanel>
+            <Button HorizontalAlignment="Center" Content="ورود به فروشگاه" Click="HomeButton_Click" Background="#FF0059D8" BorderBrush="{x:Null}">
+            </Button>
         </Grid>
-        
+
         <Grid Grid.Row="1">
-            <StackPanel x:Name="GridPage" Margin="270,60,330,70">
+            <StackPanel x:Name="GridPage" Margin="270,60,330,50">
             </StackPanel>
         </Grid>
 
