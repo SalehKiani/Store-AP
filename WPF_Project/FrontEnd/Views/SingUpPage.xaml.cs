@@ -29,12 +29,10 @@ namespace WPF_Project.FrontEnd.Views
 
         private void HaveAccount_Click(object sender, RoutedEventArgs e)
         {
-            SingUpPage signup = new SingUpPage();
             LoginPage login = new LoginPage();
-            MainWindow mainwindow = new MainWindow();
-
-            mainwindow.GridPage.Children.Remove(signup);
-            mainwindow.GridPage.Children.Add(login);
+            MainWindow main = Window.GetWindow(this) as MainWindow;
+            main.GridPage.Children.Remove(this);
+            main.GridPage.Children.Add(login);
         }
 
         private void SignUp_Click(object sender, RoutedEventArgs e)

@@ -79,7 +79,7 @@ namespace WPF_Project.FrontEnd.Views
         private void HaveNotAccount_Click(object sender, RoutedEventArgs e)
         {
             SingUpPage singUp = new SingUpPage();
-            Window main = Window.GetWindow(this);
+            MainWindow main = Window.GetWindow(this) as MainWindow;
             main.GridPage.Children.Remove(this);
             main.GridPage.Children.Add(singUp);
         }
