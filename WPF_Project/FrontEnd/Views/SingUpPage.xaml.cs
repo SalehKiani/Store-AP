@@ -30,7 +30,7 @@ namespace WPF_Project.FrontEnd.Views
         private void HaveAccount_Click(object sender, RoutedEventArgs e)
         {
             LoginPage login = new LoginPage();
-            MainWindow main = Window.GetWindow(this) as MainWindow;
+            Window main = System.Windows.Window.GetWindow(this) as Window;
             main.GridPage.Children.Remove(this);
             main.GridPage.Children.Add(login);
         }

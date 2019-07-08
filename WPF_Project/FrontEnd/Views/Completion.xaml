@@ -18,8 +18,8 @@
             <TextBox x:Name="nameTXT" TextChanged="Name_TextChange" KeyDown="Name_Keydown" materialDesign:HintAssist.Hint="Name" Foreground="White" Margin="40,10"/>
             <TextBox x:Name="phonenum" materialDesign:HintAssist.Hint="Phone Number" Foreground="White" Margin="40,10"  PreviewTextInput="Phonenumber_Preview" KeyDown="Phonenumber_Keydown"/>
             <TextBox x:Name="Address" materialDesign:HintAssist.Hint="Address" Foreground="White" Margin="40,15"/>
-            <Button x:Name="Next" Content="Next" Click="Next" Margin="40,20" Background="Blue"/>
-            <Button x:Name="Skip" Content="Skip this step" Click="Skip" Margin="40,0" Background="#FFC12D2D"/>
+            <Button x:Name="Next" Content="Next" Click="next" Margin="40,20" Background="Blue"/>
+            <Button x:Name="Skip" Content="Skip this step" Click="skip" Margin="40,0" Background="#FFC12D2D"/>
         </StackPanel>
     </Grid>
 </UserControl>

@@ -73,28 +73,29 @@ namespace WPF_Project.FrontEnd.Views
             if (e.Key == Key.Enter)
                 Address.Focus();
         }
-        private void Next(object sender, RoutedEventArgs e)
+
+        private void next(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                var db = new DataBase_connection();
-                var res = db.users.Where(i => i.Email == Repository.ActiveUser.Email).FirstOrDefault();
-                res.Name = nameTXT.Text;
-                res.PhoneNo = phonenum.Text;
-                res.Adress = Address.Text;
-            }
-            catch (Exception)
-            {
-                throw new DBFail();
-            }
+                try
+                {
+                    var db = new DataBase_connection();
+                    var res = db.users.Where(i => i.Email == Repository.ActiveUser.Email).FirstOrDefault();
+                    res.Name = nameTXT.Text;
+                    res.PhoneNo = phonenum.Text;
+                    res.Adress = Address.Text;
+                }
+                catch (Exception)
+                {
+                    throw new DBFail();
+                }
         }
 
-        private void Skip(object sender, RoutedEventArgs e)
+        private void skip(object sender, RoutedEventArgs e)
         {
-            Store_Page mainpage = new Store_Page();
-            MainWindow main = Window.GetWindow(this) as MainWindow;
-            main.GridPage.Children.Remove(this);
-            main.GridPage.Children.Add(mainpage);
+                Store_Page mainpage = new Store_Page();
+            Window main = System.Windows.Window.GetWindow(this) as Window;
+                main.GridPage.Children.Remove(this);
+                main.GridPage.Children.Add(mainpage);
         }
     }
 }

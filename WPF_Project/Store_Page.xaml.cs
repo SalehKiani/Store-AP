@@ -18,7 +18,7 @@ namespace WPF_Project
     /// <summary>
     /// Interaction logic for Store_Page.xaml
     /// </summary>
-    public partial class Store_Page : Window
+    public partial class Store_Page : System.Windows.Window
     {
         public Store_Page()
         {
@@ -75,7 +75,7 @@ namespace WPF_Project
 
         private void LoginSignupButton_Click(object sender, RoutedEventArgs e)
         {
-            var mainwin = new MainWindow();
+            var mainwin = new Window();
             mainwin.Show();
             this.Close();
         }
@@ -95,7 +95,7 @@ namespace WPF_Project
         private void showinfo(object sender, MouseButtonEventArgs e)
         {
             Profile_Page userinfo = new Profile_Page();
-            MainWindow main = MainWindow.GetWindow(this) as MainWindow;
+            Window main = Window.GetWindow(this) as Window;
             main.GridPage.Children.Remove(this);
             main.GridPage.Children.Add(userinfo);
         }
