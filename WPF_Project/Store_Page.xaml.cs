@@ -91,5 +91,13 @@ namespace WPF_Project
         {
             AddPagesGrid.Children.Clear();
         }
+
+        private void showinfo(object sender, MouseButtonEventArgs e)
+        {
+            Profile_Page userinfo = new Profile_Page();
+            MainWindow main = MainWindow.GetWindow(this) as MainWindow;
+            main.GridPage.Children.Remove(this);
+            main.GridPage.Children.Add(userinfo);
+        }
     }
 }

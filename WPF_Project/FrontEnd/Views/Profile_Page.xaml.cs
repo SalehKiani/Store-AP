@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Project.Backend;
 
 namespace WPF_Project.FrontEnd.Views
 {
@@ -24,6 +25,8 @@ namespace WPF_Project.FrontEnd.Views
         {
             InitializeComponent();
             // Add Information To TextBoxes From (UserActivity)
+
         }
+        
     }
 }

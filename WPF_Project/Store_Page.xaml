@@ -83,7 +83,7 @@
                         </ListViewItem>
                         <ListViewItem Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="FaceProfile" Foreground="White" Height="40" Width="45"/>
+                                <materialDesign:PackIcon Kind="FaceProfile" Foreground="White" Height="40" Width="45" MouseUp="showinfo"/>
                                 <TextBlock Margin="10" Text="MyProfile" MouseUp="TextBlock_MyProfile_MouseUp" FontSize="20" Foreground="White" VerticalAlignment="Center"/>
                             </StackPanel>
                         </ListViewItem>

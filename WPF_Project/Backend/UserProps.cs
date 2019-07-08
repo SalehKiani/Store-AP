@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_Project.Backend
 {
-    class UserProps
+     public class UserProps
     {
         [System.ComponentModel.DataAnnotations.Key]
         public String Email { get; set; }
