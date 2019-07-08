@@ -23,7 +23,7 @@ namespace WPF_Project.FrontEnd.Views
         public Profile_Page()
         {
             InitializeComponent();
-            // Add Information To TextBoxes From (UserActivity)
+            // Add Information To TextBoxes From Class(UserActivity)
         }
     }
 }

@@ -69,7 +69,7 @@ namespace WPF_Project
             DragMove();
         }
 
-        private void HomeButton_Click(object sender, RoutedEventArgs e)
+        private void HomeButton_Click(object sender, RoutedEventArgs e) // Translation To StorePage
         {
             var storepage = new Store_Page();
             storepage.Show();

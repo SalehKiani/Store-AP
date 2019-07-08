@@ -8,18 +8,14 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="1000">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="16*"/>
-            <ColumnDefinition Width="1*"/>
-        </Grid.ColumnDefinitions>
-        <Rectangle Fill="White"/>
+        <Rectangle Fill="White" RadiusX="50" RadiusY="50"/>
         <Grid HorizontalAlignment="Center">
             <StackPanel>
                 <materialDesign:PackIcon Kind="AccountCircle" Margin="20" HorizontalAlignment="Center" Width="100" Height="100" Foreground="#FF4B4B4B"/>
-                <TextBox x:Name="Name" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="30"/>
-                <TextBox x:Name="Email" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
-                <TextBox x:Name="PhoneNumber" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
-                <TextBox x:Name="Address" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="NameTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="30"/>
+                <TextBox x:Name="EmailTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="PhoneNumberTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="AddressTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
             </StackPanel>
         </Grid>
     </Grid>

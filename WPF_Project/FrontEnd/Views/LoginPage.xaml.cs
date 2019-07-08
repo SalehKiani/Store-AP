@@ -79,9 +79,10 @@ namespace WPF_Project.FrontEnd.Views
         {
             try
             {
-                MainWindow mainwin = new MainWindow();
-                mainwin.Remove_Login();
-                mainwin.Add_Signup();
+                SingUpPage singUp = new SingUpPage();
+                MainWindow main = Window.GetWindow(this) as MainWindow;
+                main.GridPage.Children.Remove(this);
+                main.GridPage.Children.Add(singUp);
             }
             catch(Exception ex)
             {
