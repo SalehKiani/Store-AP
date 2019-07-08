@@ -56,12 +56,10 @@ namespace WPF_Project.FrontEnd.Views
                 }
                 else
                 {
-                    MainWindow mainWindow = new MainWindow();
-                    SingUpPage singUp = new SingUpPage();
                     Completion completion = new Completion();
-
-                    mainWindow.GridPage.Children.Remove(singUp);
-                    mainWindow.GridPage.Children.Add(completion);
+                    MainWindow main = Window.GetWindow(this) as MainWindow;
+                    main.GridPage.Children.Remove(this);
+                    main.GridPage.Children.Add(completion);
                 }
             }
             catch(DBFail)
@@ -72,7 +70,45 @@ namespace WPF_Project.FrontEnd.Views
 
         private void SignUp_admin_click(object sender, RoutedEventArgs e)
         {
+            if(password.Password == "1234567890")
+            {
+                try
+                {
+                    var db = new DataBase_connection();
+                    var res = db.admins.Where(i => i.Email == email.Text);
+                    if(res != null)
+                    {
+                        MessageBox.Show("This Email Was Signuped , You Can (Login) With This", "SIGNUP_ADMIN", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                    else
+                    {
+                        if (NameAdmin.Text != null)
+                        {
+                            try
+                            {
+                                db.admins.Add(new Admin { Name = NameAdmin.Text, Email = email.Text, Password = password.Password });
+                            }
+                            catch
+                            {
+                                MessageBox.Show("Unexpected Happened,Please Try Again Later", "SIGNUP_ADMIN", MessageBoxButton.OK, MessageBoxImage.Error);
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Field (Name) Is Necessary For Admin.\nShoulden't Be Empty.","Name_Admin",MessageBoxButton.OK,MessageBoxImage.Error);
+                        }
+                    }
+                }
+                catch
+                {
 
+                }
+            }
+            else
+            {
+                password.Password = "";
+                MessageBox.Show("Your AdminPassword Is Incorrect","ERROR",MessageBoxButton.OK,MessageBoxImage.Error);
+            }
         }
     }
 }

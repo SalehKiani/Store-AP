@@ -18,7 +18,7 @@
             <TextBox x:Name="nameTXT" TextChanged="Name_TextChange" KeyDown="Name_Keydown" materialDesign:HintAssist.Hint="Name" Foreground="White" Margin="40,10"/>
             <TextBox x:Name="phonenum" materialDesign:HintAssist.Hint="Phone Number" Foreground="White" Margin="40,10"  PreviewTextInput="Phonenumber_Preview" KeyDown="Phonenumber_Keydown"/>
             <TextBox x:Name="Address" materialDesign:HintAssist.Hint="Address" Foreground="White" Margin="40,15"/>
-            <Button x:Name="Next" Content="Next" Margin="40,60" Background="Blue"/>
+            <Button x:Name="Next" Content="Next" Click="NextButton_Click" Margin="40,60" Background="Blue"/>
         </StackPanel>
     </Grid>
 </UserControl>

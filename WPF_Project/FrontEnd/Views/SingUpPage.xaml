@@ -25,9 +25,14 @@
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
                 </PasswordBox.Background>
             </PasswordBox>
-            <Button x:Name="Signup" Click="SignUp_Click" Content="SignUp" Margin="40,20" Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18"/>
+            <Button x:Name="Signup" Click="SignUp_Click" Content="SignUp" Margin="40,10" Background="#FF00068D" Foreground="#FF20C9DA" FontSize="18"/>
             <Button x:Name="HaveAccount" Click="HaveAccount_Click" Content="Do You have an account?" Margin="80,0" Background="Black" Foreground="White"/>
-            <Separator Margin="40,18"/>
+            <Separator Margin="40,14"/>
+            <TextBox x:Name="NameAdmin" materialDesign:HintAssist.Hint="Name(necessary just for admin)" FontSize="15" Foreground="White" Margin="30,1">
+                <TextBox.Background>
+                    <SolidColorBrush Color="Black" Opacity="0.4"/>
+                </TextBox.Background>
+            </TextBox>
             <Button x:Name="Signup_admin" Click="SignUp_admin_click" Content="SignUp Via Admin" Margin="40,0" Background="#FFCB5C00" BorderBrush="DeepSkyBlue" Foreground="Black" FontSize="16"/>
         </StackPanel>
     </Grid>

@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Project.Backend;
+using WPF_Project.Backend.Exceptions;
 
 namespace WPF_Project.FrontEnd.Views
 {
@@ -71,6 +73,23 @@ namespace WPF_Project.FrontEnd.Views
             if (e.Key == Key.Enter)
                 Address.Focus();
         }
-    
+
+        private void NextButton_Click(object sender, RoutedEventArgs e)
+        {
+            Repository repository = new Repository();
+            try
+            {
+                repository.complete_signup(nameTXT.Text, Address.Text, Convert.ToInt32(phonenum.Text));
+            }
+            catch(DBFail)
+            {
+                MessageBox.Show("Unexpected Happened,Please Try Again Later", "COMPLETION_SIGNUP", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+
+            Store_Page storePage = new Store_Page();
+            storePage.Show();
+            MainWindow m = new MainWindow();
+            m.Close();
+        }
     }
 }

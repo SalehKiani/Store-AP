@@ -59,7 +59,7 @@ namespace WPF_Project.Backend
             }
         }
          public void complete_signup(string name,string adress,int phonenum)
-        {
+         {
             try
             {
                 var db = new DataBase_connection();
@@ -70,6 +70,6 @@ namespace WPF_Project.Backend
             {
                 throw new DBFail();
             }
-        }
+         }
     }
 }
