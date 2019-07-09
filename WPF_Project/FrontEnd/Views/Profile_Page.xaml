@@ -11,12 +11,14 @@
         <Rectangle Fill="White" RadiusX="50" RadiusY="50"/>
         <Grid HorizontalAlignment="Center">
             <StackPanel>
+                <materialDesign:PackIcon Kind="Close" HorizontalAlignment="Right" Width="30" Height="30" MouseUp="Close_Button_MouseUp"/>
                 <materialDesign:PackIcon Kind="AccountCircle" Margin="20" HorizontalAlignment="Center" Width="100" Height="100" Foreground="#FF4B4B4B"/>
                 <TextBox x:Name="NameTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="30"/>
-                <TextBox x:Name="EmailTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="EmailTXT" Text="{Binding Path=Repository.Activeuser.Email}" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
                 <TextBox x:Name="PhoneNumberTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
                 <TextBox x:Name="AddressTXT" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
             </StackPanel>
         </Grid>
+        
     </Grid>
 </UserControl>

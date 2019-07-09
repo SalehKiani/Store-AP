@@ -26,27 +26,8 @@ namespace WPF_Project
         public MainWindow()
         {
             InitializeComponent();
-            this.GridPage.Children.Add(login);
+            this.GridPage.Children.Add(new LoginPage());
         }
-        LoginPage login = new LoginPage();
-        SingUpPage signup = new SingUpPage();
-        public void Add_Login()
-        {
-            GridPage.Children.Add(login);
-        }
-        public void Add_Signup()
-        {
-            GridPage.Children.Add(signup);
-        }
-        public void Remove_Signup()
-        {
-            GridPage.Children.Remove(signup);
-        }
-        public void Remove_Login()
-        {
-            GridPage.Children.Remove(login);
-        }
-
 
         private void Line_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {

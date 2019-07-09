@@ -60,7 +60,7 @@ namespace WPF_Project.FrontEnd.Views
                     var res = db.admins.Where(i => i.Email == email.Text);
                     if(res != null)
                     {
-                        //Go To Admin Page
+                        //In (UserActivity) Function (Admin)=True
                     }
                     else
                     {
@@ -88,9 +88,6 @@ namespace WPF_Project.FrontEnd.Views
             {
                 MessageBox.Show(ex.Message);
             }
-
-        //    GridPage.Children.RemoveAt(0);
-        //    GridPage.Children.Add(signup);
         }
     }
 }

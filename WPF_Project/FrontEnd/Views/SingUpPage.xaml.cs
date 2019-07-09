@@ -52,7 +52,7 @@ namespace WPF_Project.FrontEnd.Views
 
                 if(!result)
                 {
-                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Emain","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Error);
+                    MessageBox.Show("This Email Is Existing.Please Enter Another Email Or (Login) With This Email","SIGNUP",MessageBoxButton.OK,MessageBoxImage.Error);
                 }
                 else
                 {
@@ -60,6 +60,7 @@ namespace WPF_Project.FrontEnd.Views
                     MainWindow main = Window.GetWindow(this) as MainWindow;
                     main.GridPage.Children.Remove(this);
                     main.GridPage.Children.Add(completion);
+                    MessageBox.Show("Congragulations!\nYou Have an account now.", "SIGNUP", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
             }
             catch(DBFail)

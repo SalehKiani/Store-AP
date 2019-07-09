@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_Project.Backend;
 
 namespace WPF_Project.FrontEnd.Views
 {
@@ -24,6 +25,12 @@ namespace WPF_Project.FrontEnd.Views
         {
             InitializeComponent();
             // Add Information To TextBoxes From Class(UserActivity)
+        }
+
+        private void Close_Button_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Store_Page store_Page = Window.GetWindow(this) as Store_Page;
+            store_Page.AddPagesGrid.Children.Remove(this);
         }
     }
 }

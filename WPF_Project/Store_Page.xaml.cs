@@ -82,14 +82,19 @@ namespace WPF_Project
 
         private void TextBlock_MyProfile_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Profile_Page profile_page = new Profile_Page();
-            AddPagesGrid.Children.Clear();
-            AddPagesGrid.Children.Add(profile_page);
+            Profile_Page userinfo = new Profile_Page();
+            AddPagesGrid.Children.Add(userinfo);
         }
 
         private void TextBlock_Home_MouseUp(object sender, MouseButtonEventArgs e)
         {
             AddPagesGrid.Children.Clear();
+        }
+
+        private void showinfo(object sender, MouseButtonEventArgs e)
+        {
+            Profile_Page userinfo = new Profile_Page();
+            AddPagesGrid.Children.Add(userinfo);
         }
     }
 }

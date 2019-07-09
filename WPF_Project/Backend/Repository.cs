@@ -4,14 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WPF_Project.Backend.Exceptions;
+using WPF_Project.Backend;
+using System.ComponentModel;
 
 namespace WPF_Project.Backend
 {
-    public class Repository
+    public class Repository : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        List<UserProps> Userlist = new List<UserProps>();
+        List<Admin> Adminlist = new List<Admin>();
+        static public UserProps ActiveUser = new UserProps();
+
         private string email,pass;
-
-
         public bool loginCheck(string email,string password)
         {
             try
