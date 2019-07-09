@@ -95,9 +95,9 @@ namespace WPF_Project
         private void showinfo(object sender, MouseButtonEventArgs e)
         {
             Profile_Page userinfo = new Profile_Page();
-            Window main = Window.GetWindow(this) as Window;
-            main.GridPage.Children.Remove(this);
-            main.GridPage.Children.Add(userinfo);
+            Store_Page main = Window.GetWindow(this) as Store_Page;
+            main.AddPagesGrid.Children.Remove(this);
+            main.AddPagesGrid.Children.Add(userinfo);
         }
     }
 }

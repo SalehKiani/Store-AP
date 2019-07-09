@@ -17,7 +17,7 @@
             <StackPanel>
                 <materialDesign:PackIcon Kind="AccountCircle" Margin="20" HorizontalAlignment="Center" Width="100" Height="100" Foreground="#FF4B4B4B"/>
                 <TextBox x:Name="Name" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="30"/>
-                <TextBox x:Name="Email" Text="{Binding Path=Repository.Activeuser.Email}" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
+                <TextBox x:Name="Email"  Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
                 <TextBox x:Name="PhoneNumber" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
                 <TextBox x:Name="Address" Width="400" Margin="10" TextBlock.TextAlignment="Center" FontSize="25"/>
             </StackPanel>

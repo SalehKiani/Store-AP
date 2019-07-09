@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:WPF_Project"
         mc:Ignorable="d"
         Title="Store_Page" Height="600" Width="1000" WindowStyle="None">
-    <Grid>
+    <Grid x:Name="BasicGrid">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF000323" Offset="0.198"/>

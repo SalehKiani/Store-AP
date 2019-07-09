@@ -61,7 +61,8 @@ namespace WPF_Project.FrontEnd.Views
                     var res = db.admins.Where(i => i.Email == email.Text);
                     if(res != null)
                     {
-                        //Go To Admin Page
+                        MessageBox.Show("You Logged in As Administrator", "LOGIN ADMIN", MessageBoxButton.OK, MessageBoxImage.Information);
+
                     }
                     else
                     {
@@ -81,7 +82,7 @@ namespace WPF_Project.FrontEnd.Views
             try
             {
             SingUpPage singUp = new SingUpPage();
-                Window main = System.Windows.Window.GetWindow(this) as Window;
+            Window main = System.Windows.Window.GetWindow(this) as Window;
             main.GridPage.Children.Remove(this);
             main.GridPage.Children.Add(singUp);
             }
