@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:WPF_Project"
         mc:Ignorable="d"
-        Title="Store_Page" Height="600" Width="1000" WindowStyle="None">
+        Title="Store_Page" Height="600" Width="1000" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Grid x:Name="BasicGrid">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -20,6 +20,10 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="8*"/>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0" MouseDown="Grid_MouseDown" VerticalAlignment="Top" Background="#FF04AEBF">
             <StackPanel Orientation="Horizontal">
@@ -31,7 +35,7 @@
                         </LinearGradientBrush>
                     </Button.Background>
                 </Button>
-                <Button x:Name="ManagementBTN" Content="مدیریت" Background="#FF512500" BorderBrush="{x:Null}" />
+                <Button x:Name="ManagementBTN"  Content="مدیریت" Background="#FF512500" BorderBrush="{x:Null}" />
             </StackPanel>
         </Grid>
         <Grid Grid.Row="1">
@@ -46,7 +50,7 @@
             </StackPanel>
         </Grid>
 
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="2"><!--Add Product To Show-->
             <StackPanel Orientation="Horizontal">
                 <Grid>
                     <WrapPanel x:Name="WrapProduct">
@@ -58,10 +62,10 @@
         </Grid>
 
         <Grid x:Name="AddPagesGrid" Grid.Row="1" Grid.RowSpan="2">
-            
+            <!--Add Usercontrols In This Grid-->
         </Grid>
 
-        <Grid Width="60" x:Name="GridMenu" HorizontalAlignment="Right" Grid.RowSpan="3" Background="#FF000C2C">
+        <Grid Width="60" x:Name="GridMenu" Grid.Column="1" HorizontalAlignment="Right" Grid.RowSpan="3" Background="#FF000C2C">
             <StackPanel>
 
                 <Grid Height="60" Background="#FF0260BA">

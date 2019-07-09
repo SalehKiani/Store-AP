@@ -81,10 +81,10 @@ namespace WPF_Project.FrontEnd.Views
         {
             try
             {
-            SingUpPage singUp = new SingUpPage();
-            Window main = System.Windows.Window.GetWindow(this) as Window;
-            main.GridPage.Children.Remove(this);
-            main.GridPage.Children.Add(singUp);
+                SingUpPage singUp = new SingUpPage();
+                MainWindow main = Window.GetWindow(this) as MainWindow;
+                main.GridPage.Children.Remove(this);
+                main.GridPage.Children.Add(singUp);
             }
             catch(Exception ex)
             {

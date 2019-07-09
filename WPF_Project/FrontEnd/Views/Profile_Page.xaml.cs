@@ -24,9 +24,13 @@ namespace WPF_Project.FrontEnd.Views
         public Profile_Page()
         {
             InitializeComponent();
-            // Add Information To TextBoxes From (UserActivity)
-
+            // Add Information To TextBoxes From Class(UserActivity)
         }
-        
+
+        private void Close_Button_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Store_Page store_Page = Window.GetWindow(this) as Store_Page;
+            store_Page.AddPagesGrid.Children.Remove(this);
+        }
     }
 }

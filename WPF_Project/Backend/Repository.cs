@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace WPF_Project.Backend
 {
-    public class Repository
+    public class Repository : INotifyPropertyChanged
     {
 
         List<UserProps> Userlist = new List<UserProps>();
@@ -86,6 +86,6 @@ namespace WPF_Project.Backend
             {
                 throw new DBFail();
             }
-        }
+         }
     }
 }

@@ -82,9 +82,8 @@ namespace WPF_Project
 
         private void TextBlock_MyProfile_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Profile_Page profile_page = new Profile_Page();
-            AddPagesGrid.Children.Clear();
-            AddPagesGrid.Children.Add(profile_page);
+            Profile_Page userinfo = new Profile_Page();
+            AddPagesGrid.Children.Add(userinfo);
         }
 
         private void TextBlock_Home_MouseUp(object sender, MouseButtonEventArgs e)
@@ -95,9 +94,7 @@ namespace WPF_Project
         private void showinfo(object sender, MouseButtonEventArgs e)
         {
             Profile_Page userinfo = new Profile_Page();
-            Store_Page main = Window.GetWindow(this) as Store_Page;
-            main.AddPagesGrid.Children.Remove(this);
-            main.AddPagesGrid.Children.Add(userinfo);
+            AddPagesGrid.Children.Add(userinfo);
         }
     }
 }

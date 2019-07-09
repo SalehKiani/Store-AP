@@ -33,13 +33,13 @@
                     <materialDesign:PackIcon Kind="AccountConvert" Width="40" Height="40" Margin="40,5,0,5" Background="#FF0046FF"/>
                     <TextBlock x:Name="FakeAccountTXTBlock" Text="FakeAccount" Height="40" MouseUp="FakeAccount_MouseUp" Padding="5,0" VerticalAlignment="Center" FontSize="25" Background="#FF0046FF"/>
                 </StackPanel>
-                <Button Margin="40,20" Height="40" Background="Green" Content="Add Product To DataBase" FontSize="20" Click="Makeproduct"/>
+                <Button Margin="40,20" Height="40" Background="Green" Content="Add Product To DataBase" FontSize="20"/>
                 <Button Margin="40,0,40,20" Height="40" Background="Red" Content="Remove Product From DataBase" FontSize="20"/>
-                <TextBox Margin="30,20,30,10" Name="Url" materialDesign:HintAssist.Hint="URL(Image)" FontSize="30"/>
-                <TextBox Margin="30,10" Name="name" materialDesign:HintAssist.Hint="Name" FontSize="30"/>
-                <TextBox Margin="30,10" Name="price" materialDesign:HintAssist.Hint="Price" FontSize="30"/>
-                <TextBox Margin="30,10" Name="type" materialDesign:HintAssist.Hint="Type" FontSize="30"/>
-                <TextBox Margin="30,10" Name="exist" materialDesign:HintAssist.Hint="Number Of Existe" FontSize="30"/>
+                <TextBox Margin="30,20,30,10" materialDesign:HintAssist.Hint="URL(Image)" FontSize="30"/>
+                <TextBox Margin="30,10" materialDesign:HintAssist.Hint="Name" FontSize="30"/>
+                <TextBox Margin="30,10" materialDesign:HintAssist.Hint="Price" FontSize="30"/>
+                <TextBox Margin="30,10" materialDesign:HintAssist.Hint="Type" FontSize="30"/>
+                <TextBox Margin="30,10" materialDesign:HintAssist.Hint="Number Of Existe" FontSize="30"/>
             </StackPanel>
             
             <Grid Grid.Column="1">
