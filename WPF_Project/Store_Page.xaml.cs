@@ -96,5 +96,13 @@ namespace WPF_Project
             Profile_Page userinfo = new Profile_Page();
             AddPagesGrid.Children.Add(userinfo);
         }
+
+        private void complete(object sender, MouseButtonEventArgs e)
+        {
+            this.Close();
+            MainWindow main = new MainWindow();
+            main.Show();
+            main.GridPage.Children.Add(new Completion());
+        }
     }
 }

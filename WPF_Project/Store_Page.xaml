@@ -89,7 +89,7 @@
                         </ListViewItem>
                         <ListViewItem Height="60">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Settings" Foreground="White" Height="40" Width="45"/>
+                                <materialDesign:PackIcon MouseUp="complete" Kind="Settings" Foreground="White" Height="40" Width="45"/>
                                 <TextBlock Margin="10" Text="Settings" FontSize="20" Foreground="White" VerticalAlignment="Center"/>
                             </StackPanel>
                         </ListViewItem>

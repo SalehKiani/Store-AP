@@ -83,6 +83,10 @@ namespace WPF_Project.FrontEnd.Views
                     res.Name = nameTXT.Text;
                     res.PhoneNo = phonenum.Text;
                     res.Adress = Address.Text;
+                MainWindow main = new MainWindow();
+                main.Close();
+                Store_Page s = new Store_Page();
+                s.Show();
                 }
                 catch (Exception)
                 {

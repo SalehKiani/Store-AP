@@ -37,7 +37,11 @@ namespace WPF_Project.FrontEnd.Views
                 result = repo.loginCheck(email.Text, password.Password);
                 if(result)
                 {
-                    MessageBox.Show("Login Succesfully","LOGIN",MessageBoxButton.OK,MessageBoxImage.Information);
+                    MessageBox.Show("Login Succesfully", "LOGIN", MessageBoxButton.OK, MessageBoxImage.Information);
+                    Store_Page stp = new Store_Page();
+                    stp.Show();
+                    MainWindow main = Window.GetWindow(this) as MainWindow;
+                    main.Close();
                 }
             }
             catch(LoginFail)
