@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WPF_Project.Backend.Exceptions;
 using WPF_Project.Backend;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace WPF_Project.Backend
 {
@@ -20,11 +21,12 @@ namespace WPF_Project.Backend
 
         public bool loginCheck(string email,string password)
         {
+            if (email == string.Empty || password == string.Empty)
+                throw new EmptyField();
             try
             {
                 var db = new DataBase_connection();
                 var res = db.users.Where(i => i.Email == email && i.Password == password).FirstOrDefault();
-
                 if (res != null)
                 {
                     ActiveUser.Email = email;    ActiveUser.Password = password;
@@ -56,6 +58,7 @@ namespace WPF_Project.Backend
                     return false;
                 }
                 db.users.Add(new UserProps() { Email = email, Password = password });
+                db.SaveChanges();
                 Userlist.Add(new UserProps { Email = email, Password = password });
                 ActiveUser.Email = email;      ActiveUser.Password = password;
             }

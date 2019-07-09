@@ -93,9 +93,11 @@ namespace WPF_Project.FrontEnd.Views
         private void skip(object sender, RoutedEventArgs e)
         {
                 Store_Page mainpage = new Store_Page();
-            MainWindow main = System.Windows.Window.GetWindow(this) as MainWindow;
-                main.GridPage.Children.Remove(this);
-                main.GridPage.Children.Add(mainpage);
+                MainWindow main = System.Windows.Window.GetWindow(this) as MainWindow;
+                mainpage.Show();
+                main.Close();
+
+                
         }
     }
 }

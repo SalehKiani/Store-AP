@@ -48,6 +48,10 @@ namespace WPF_Project.FrontEnd.Views
             {
                 MessageBox.Show("UnExpected Happen","LOGIN",MessageBoxButton.OK,MessageBoxImage.Error);
             }
+            catch(EmptyField)
+            {
+                MessageBox.Show("Please fill all of the fields!", "LOGIN", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
             
         }
 

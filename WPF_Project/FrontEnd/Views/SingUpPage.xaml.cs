@@ -71,7 +71,9 @@ namespace WPF_Project.FrontEnd.Views
 
         private void SignUp_admin_click(object sender, RoutedEventArgs e)
         {
-            if(password.Password == "1234567890")
+            if (password.Password == string.Empty || email.Text == string.Empty || NameAdmin.Text == string.Empty)
+                MessageBox.Show("Please fill all of the fields!", "Sign Up Admin", MessageBoxButton.OK, MessageBoxImage.Information);
+            else if (password.Password == "1234567890")
             {
                 try
                 {

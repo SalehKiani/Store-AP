@@ -157,6 +157,11 @@
     <Compile Include="FrontEnd\Views\SingUpPage.xaml.cs">
       <DependentUpon>SingUpPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190709054751_init.cs" />
+    <Compile Include="Migrations\20190709054751_init.designer.cs">
+      <DependentUpon>20190709054751_init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\DataBase_connectionModelSnapshot.cs" />
     <Compile Include="Store_Page.xaml.cs">
       <DependentUpon>Store_Page.xaml</DependentUpon>
     </Compile>
@@ -219,11 +224,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\20190504153005_InitialCreate.cs" />
-    <Compile Include="Migrations\20190504153005_InitialCreate.designer.cs">
-      <DependentUpon>20190504153005_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\DataBase_connectionModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

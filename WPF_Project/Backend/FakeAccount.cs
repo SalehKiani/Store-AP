@@ -34,6 +34,7 @@ namespace WPF_Project.Backend
                     Password = pass.ToString()
                 });
             }
+            db.SaveChanges();
         }
     }
 }
