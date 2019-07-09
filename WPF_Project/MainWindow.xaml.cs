@@ -21,9 +21,9 @@ namespace WPF_Project
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Window : System.Windows.Window
+    public partial class MainWindow : Window
     {
-        public Window()
+        public MainWindow()
         {
             InitializeComponent();
             this.GridPage.Children.Add(new LoginPage());

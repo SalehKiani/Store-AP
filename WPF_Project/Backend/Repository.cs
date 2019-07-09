@@ -9,7 +9,7 @@ using System.ComponentModel;
 
 namespace WPF_Project.Backend
 {
-    public class Repository : INotifyPropertyChanged
+    public class Repository
     {
 
         List<UserProps> Userlist = new List<UserProps>();

@@ -8,7 +8,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="500" d:DesignWidth="1000">
     <Grid>
-        <Rectangle Fill="White" RadiusX="50" RadiusY="50"/>
+        <Rectangle Fill="White"/>
         <Grid HorizontalAlignment="Center">
             <StackPanel>
                 <materialDesign:PackIcon Kind="Close" HorizontalAlignment="Right" Width="30" Height="30" MouseUp="Close_Button_MouseUp"/>

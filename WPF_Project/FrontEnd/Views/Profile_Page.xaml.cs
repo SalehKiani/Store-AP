@@ -25,6 +25,19 @@ namespace WPF_Project.FrontEnd.Views
         {
             InitializeComponent();
             // Add Information To TextBoxes From Class(UserActivity)
+            var db = new DataBase_connection();
+            try
+            {
+                var au = db.users.Where(i => i.Email == Repository.ActiveUser.Email).FirstOrDefault();
+                Email.Text = Repository.ActiveUser.Email;
+                Name.Text = au.Name;
+                PhoneNumber.Text = au.PhoneNo;
+                Address.Text = au.Adress;
+            }
+            catch(Exception)
+            {
+                MessageBox.Show("Unexpected Happpenned!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void Close_Button_MouseUp(object sender, MouseButtonEventArgs e)
